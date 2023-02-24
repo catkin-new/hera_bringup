@@ -1,0 +1,13 @@
+robot_sensors:
+  odom:
+    node: odom
+    type: nav_msgs/Odometry
+  scan:
+    node: base_scan_front
+    type: sensor_msgs/LaserScan
+  locals:
+    node: locals
+    type: hera_msgs/LocalList
+  camera:
+    node: camera/rgb/image_color
+    type: sensor_msgs/Image

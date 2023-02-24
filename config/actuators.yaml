@@ -1,0 +1,29 @@
+robot_actuators:
+  set_pose:
+    comm: TOPIC
+    node: initial_pose
+    type: geometry_msgs/PoseWithCovarianceStamped
+  talk:
+    comm: ACTION
+    node: gtts_ros/goal
+    type: hera_msgs/TalkActionGoal
+  listen:
+    comm: SERVICE
+    node: SpeechRecognition
+    type: hera_msgs/StartSpeech
+  teleop:
+    comm: TOPIC
+    node: cmd_vel
+    type: geometry_msgs/Twist
+  go_to:
+    comm: ACTION
+    node: move_base/goal
+    type: move_base_msgs/MoveBaseActionGoal
+  save_local:
+    comm: SERVICE
+    node: /map/save_local
+    type: map/SaveLocal
+  move_head:
+    comm: SERVICE
+    node: head_interface
+    type: hera_msgs/MoveHead
